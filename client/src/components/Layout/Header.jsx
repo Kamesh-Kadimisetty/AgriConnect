@@ -41,7 +41,7 @@ const Header = () => {
             <div className="mb-3">
               <Link
                 to="/"
-                className="flex px-1 py-2 rounded-md space-x-3 justify-center items-center"
+                className="flex items-center justify-center px-1 py-2 space-x-3 rounded-md"
               >
                 <img
                   className="h-[70px] w-[70px] rounded-full"
@@ -55,19 +55,19 @@ const Header = () => {
               <div className="fixed top-0 right-0 flex">
                 <button
                   onClick={() => handleChangeLang(i18n, "hindi")}
-                  className="bg-white text-black px-2 py-1"
+                  className="px-2 py-1 text-black bg-white"
                 >
                   Hindi
                 </button>
                 <button
                   onClick={() => handleChangeLang(i18n, "telugu")}
-                  className="bg-white text-black px-2 py-1"
+                  className="px-2 py-1 text-black bg-white"
                 >
                   Telugu
                 </button>
                 <button
                   onClick={() => handleChangeLang(i18n, "english")}
-                  className="bg-white text-black px-2 py-1"
+                  className="px-2 py-1 text-black bg-white"
                 >
                   English
                 </button>
@@ -84,14 +84,14 @@ const Header = () => {
                     <NavLink to="/signup">Register</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/signin">Login</NavLink>
+                    <NavLink to="/login">Login</NavLink>
                   </li>
                 </>
               ) : (
                 <div className="flex flex-col h-[calc(100vh-140px)] justify-between">
                   <div className="flex flex-col space-y-3">
                     <li className="px-2 py-2 rounded-md duration-100 ease-in-out hover:bg-[#7ED957]">
-                      <NavLink to="/" className="flex space-x-5 items-center">
+                      <NavLink to="/" className="flex items-center space-x-5">
                         <HomeIcon
                           fontSize="large"
                           className="scale-[1.2] text-[white]"
@@ -103,7 +103,7 @@ const Header = () => {
                     <li className="px-2 py-2 rounded-md duration-100 ease-in-out hover:bg-[#7ED957]">
                       <NavLink
                         to="/weather"
-                        className="flex space-x-5 items-center"
+                        className="flex items-center space-x-5"
                       >
                         <WbSunnyIcon
                           fontSize="large"
@@ -116,7 +116,7 @@ const Header = () => {
                     <li className="px-2 py-2 rounded-md duration-100 ease-in-out hover:bg-[#7ED957]">
                       <NavLink
                         to="/trending"
-                        className="flex space-x-5 items-center"
+                        className="flex items-center space-x-5"
                       >
                         <TrendingUpIcon
                           fontSize="large"
@@ -132,7 +132,7 @@ const Header = () => {
                     <li className="px-1 py-2 rounded-md duration-100 ease-in-out hover:bg-[#7ED957]">
                       <NavLink
                         to={`/myprofile`}
-                        className="flex space-x-5 items-center"
+                        className="flex items-center space-x-5"
                       >
                         <img
                           className="h-[40px] w-[40px] rounded-full"
@@ -147,7 +147,7 @@ const Header = () => {
                       <NavLink
                         onClick={handleSignout}
                         to="/login"
-                        className="flex space-x-5 items-center"
+                        className="flex items-center space-x-5"
                       >
                         <LogoutIcon
                           fontSize="large"

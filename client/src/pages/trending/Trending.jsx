@@ -39,27 +39,27 @@ function Trending() {
       <div className="p-5">
         <div className="bg-[#7ED957] rounded-md p-5">
           <div className="text-2xl font-extrabold">Trending Crops</div>
-          <div className="flex space-x-3 mt-5">
+          <div className="flex mt-5 space-x-3">
             <input
               type="text"
               placeholder="Commodity"
               value={item}
               onChange={(e) => setitem(e.target.value)}
-              className="rounded-md px-2"
+              className="px-2 rounded-md"
             />
             <input
               type="text"
               placeholder="State"
               value={state}
               onChange={(e) => setstate(e.target.value)}
-              className="rounded-md px-2"
+              className="px-2 rounded-md"
             />
             <input
               type="text"
               placeholder="City"
               value={city}
               onChange={(e) => setcity(e.target.value)}
-              className="rounded-md px-2"
+              className="px-2 rounded-md"
             />
             <button
               className="bg-[#00BF63] text-white font-semibold px-3 py-2 rounded-md"
@@ -88,25 +88,25 @@ function Trending() {
               <tr>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                 >
                   Date
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                 >
                   Max Price
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                 >
                   Min Price
                 </th>
                 <th
                   scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  className="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase"
                 >
                   Model Price
                 </th>
@@ -119,7 +119,8 @@ function Trending() {
               </h1>
             )}
             <tbody className="bg-white divide-y divide-gray-200">
-              {data !== null &&
+            {data !== null && console.log(data)}
+              {/* {data !== null &&
                 data.map((e, i) => (
                   <tr key={i}>
                     <td className="px-6 py-4 whitespace-nowrap">{e.Date}</td>
@@ -133,7 +134,7 @@ function Trending() {
                       {e["Model Prize"]}
                     </td>
                   </tr>
-                ))}
+                ))} */}
             </tbody>
           </table>
         </div>

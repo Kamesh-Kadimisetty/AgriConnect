@@ -39,16 +39,16 @@ const CropRec = () => {
     <div className="flex-1">
       <form
         onSubmit={handleSubmit}
-        className="bg-white py-3 pb-10 rounded-lg flex flex-col px-10"
+        className="flex flex-col px-10 py-3 pb-10 bg-white rounded-lg"
       >
-        <div className="flex space-x-10 justify-around">
+        <div className="flex justify-around space-x-10">
           <div>
             <div>
               <input
                 value={P}
                 type="number"
                 placeholder="Phosphorous"
-                className="bg-transparent outline-none placeholder:text-black text-xl py-2 border-b-2 my-2"
+                className="py-2 my-2 text-xl bg-transparent border-b-2 outline-none placeholder:text-black"
                 onChange={(e) => setP(e.target.value)}
                 required
               />
@@ -58,7 +58,7 @@ const CropRec = () => {
                 value={K}
                 type="number"
                 placeholder="Potassium"
-                className="bg-transparent outline-none placeholder:text-black text-xl py-2 border-b-2 my-2"
+                className="py-2 my-2 text-xl bg-transparent border-b-2 outline-none placeholder:text-black"
                 onChange={(e) => setK(e.target.value)}
                 required
               />
@@ -68,7 +68,7 @@ const CropRec = () => {
                 value={N}
                 type="number"
                 placeholder="Nitrogen"
-                className="bg-transparent outline-none placeholder:text-black text-xl py-2 border-b-2 my-2"
+                className="py-2 my-2 text-xl bg-transparent border-b-2 outline-none placeholder:text-black"
                 onChange={(e) => setN(e.target.value)}
                 required
               />
@@ -78,7 +78,7 @@ const CropRec = () => {
                 value={ph}
                 type="number"
                 placeholder="pH"
-                className="bg-transparent outline-none placeholder:text-black text-xl py-2 border-b-2 my-2"
+                className="py-2 my-2 text-xl bg-transparent border-b-2 outline-none placeholder:text-black"
                 onChange={(e) => setPh(e.target.value)}
                 required
               />
@@ -90,7 +90,7 @@ const CropRec = () => {
                 value={temperature}
                 type="number"
                 placeholder="Temperature"
-                className="bg-transparent outline-none placeholder:text-black text-xl py-2 border-b-2 my-2"
+                className="py-2 my-2 text-xl bg-transparent border-b-2 outline-none placeholder:text-black"
                 onChange={(e) => setTemperature(e.target.value)}
                 required
               />
@@ -100,7 +100,7 @@ const CropRec = () => {
                 value={humidity}
                 type="number"
                 placeholder="Humidity"
-                className="bg-transparent outline-none placeholder:text-black text-xl py-2 border-b-2 my-2"
+                className="py-2 my-2 text-xl bg-transparent border-b-2 outline-none placeholder:text-black"
                 onChange={(e) => setHumidity(e.target.value)}
                 required
               />
@@ -110,7 +110,7 @@ const CropRec = () => {
                 value={rainfall}
                 type="number"
                 placeholder="Rainfall"
-                className="bg-transparent outline-none placeholder:text-black text-xl py-2 border-b-2 my-2"
+                className="py-2 my-2 text-xl bg-transparent border-b-2 outline-none placeholder:text-black"
                 onChange={(e) => setRainfall(e.target.value)}
                 required
               />
@@ -125,7 +125,7 @@ const CropRec = () => {
           Predict
         </button>
         <h1 className="text-center">
-          {ans && `The most suitable crop would be ${ans}`}
+          {ans && (<p className="text-2xl"><b>The most suitable crop would be {ans}</b></p>)}
         </h1>
       </form>
     </div>

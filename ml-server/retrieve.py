@@ -34,15 +34,15 @@ def script(state, commodity, market):
 
     time.sleep(3)
 
-    print("Market")
-    dropdown = Select(driver.find_element("id", 'ddlMarket'))
-    dropdown.select_by_visible_text(market)
+    # print("Market")
+    # dropdown = Select(driver.find_element("id", 'ddlMarket'))
+    # dropdown.select_by_visible_text(market)
 
-    print("Click")
-    button = driver.find_element("id", 'btnGo')
-    button.click()
+    # print("Click")
+    # button = driver.find_element("id", 'btnGo')
+    # button.click()
 
-    time.sleep(1)
+    # time.sleep(1)
 
     driver.implicitly_wait(10)
     from selenium.webdriver.support.ui import WebDriverWait
@@ -53,12 +53,15 @@ def script(state, commodity, market):
         EC.presence_of_element_located((By.ID, 'cphBody_GridPriceData'))
     )
     soup = BeautifulSoup(driver.page_source, 'html.parser')
+    print(table)
 
     data_list = []
     # Iterate over each  row
     for row in soup.find_all("tr"):
         data_list.append(row.text.replace("\n", "_").replace("  ", "").split("__"))
 
+    print('hhhhhhhhhhhhhhh', data_list)
+    
     jsonList = []
     for i in data_list[4:len(data_list) - 1]:
         d = {}

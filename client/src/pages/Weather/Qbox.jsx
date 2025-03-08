@@ -62,7 +62,7 @@ function Qbox() {
       >
         <input
           type="text"
-          className="w-full my-3 p-3 rounded-md outline-none border-2"
+          className="w-full p-3 my-3 border-2 rounded-md outline-none"
           placeholder="Enter your queries here!"
           value={msg}
           onChange={(e) => {

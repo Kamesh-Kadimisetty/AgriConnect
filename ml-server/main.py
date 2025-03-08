@@ -6,7 +6,7 @@ from retrieve import script
 from flask_cors import CORS
 # create the Flask app
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+CORS(app, origin='https://localhost:5173', supports_credentials=True)
 
 askinstance = Ask()
 
